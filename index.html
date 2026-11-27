@@ -1,138 +1,139 @@
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Absensi Digital Geografi XII G</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f1f5f9;
-            color: #1e293b;
-            min-height: 100vh;
-        }
-
-        header {
-            background: #123b50;
-            color: white;
-            padding: 22px 18px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 23px;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            margin-top: 9px;
-            font-size: 14px;
-            color: #d4e5ec;
-        }
-
-        main {
-            max-width: 650px;
-            margin: 45px auto;
-            padding: 20px;
-        }
-
-        .welcome {
-            background: white;
-            padding: 35px 24px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-        }
-
-        .welcome h2 {
-            color: #123b50;
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-
-        .welcome p {
-            line-height: 1.8;
-            color: #475569;
-            font-size: 15px;
-        }
-
-        .quote {
-            margin-top: 25px;
-            padding: 20px;
-            background: #e2edf2;
-            border-left: 4px solid #123b50;
-            border-radius: 8px;
-            text-align: left;
-        }
-
-        .quote h3 {
-            color: #123b50;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .quote p {
-            font-style: italic;
-            font-size: 14px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px 15px;
-            color: #64748b;
-            font-size: 13px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <h1>ABSENSI DIGITAL GEOGRAFI</h1>
-        <p>Kelas XII G | Tahun Ajaran 2026/2027</p>
-    </header>
-
-    <main>
-        <section class="welcome">
-            <h2>Selamat Datang</h2>
-
-            <p>
-                Selamat datang di Sistem Absensi Digital
-                Mata Pelajaran Geografi Kelas XII G.
-                <br><br>
-                Platform ini dirancang untuk mendukung
-                pencatatan kehadiran yang lebih tertib,
-                praktis, dan efisien melalui teknologi digital.
-            </p>
-
-            <div class="quote">
-                <h3>Motivasi Kehidupan</h3>
-                <p>
-                    "Seperti bumi yang terus berotasi,
-                    kehidupan selalu bergerak.
-                    Teruslah melangkah, karena setiap perjalanan
-                    memiliki arah dan tujuan."
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026/2027 Absensi Digital Geografi XII G</p>
-        <p>Inovasi Pendidikan dalam Era Revolusi Industri 4.0</p>
-    </footer>
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4f8ef"><title>Absensi Geografi XII G · 2026/2027</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f4f8ef;--surface:#fbfff7;--surface2:#e8f5df;--surface3:#d8edca;--ink:#17251b;--muted:#657568;--primary:#315b38;--onprimary:#fff;--primary-container:#c8f0b4;--secondary:#4c6350;--outline:#cbd9c6;--green:#245b35;--green-bg:#d7f5c9;--amber:#795900;--amber-bg:#fff0c2;--red:#a33b35;--red-bg:#ffdad5;--shadow:0 3px 12px #263b2510,0 1px 3px #263b250a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Google Sans',Roboto,Arial,sans-serif}.top{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100vw - 1180px)/2));background:var(--bg)}.brand{display:flex;align-items:center;gap:13px}.logo{height:48px;width:48px;border-radius:17px;background:var(--primary-container);color:var(--primary);display:grid;place-items:center;font-size:25px}.brand h1{font-size:16px;font-weight:700;margin:0;letter-spacing:.1px}.brand p{font-size:12px;color:var(--muted);margin:4px 0 0}.top-right{font-size:12px;color:var(--muted);text-align:right;line-height:1.5}.top-right b{color:var(--primary);font-size:14px}.wrap{max-width:1180px;margin:8px auto;padding:0 22px 45px}.welcome{background:linear-gradient(135deg,#c9f2b4 0%,#e3f7d7 100%);border-radius:30px;padding:27px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:142px}.welcome h2{font-size:25px;margin:0 0 8px;font-weight:600;color:#18351f}.welcome p{font-size:14px;line-height:1.55;color:#49634c;margin:0;max-width:540px}.year-pill{background:#fff9;color:var(--primary);padding:11px 16px;border-radius:100px;font-size:12px;font-weight:700;white-space:nowrap}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:27px 2px 14px}.toolbar h3{font-size:18px;font-weight:600;margin:0}.select{background:var(--surface);border:1px solid var(--outline);border-radius:14px;padding:12px 16px;color:var(--ink);min-width:190px;outline-color:var(--primary)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.stat{background:var(--surface);border-radius:24px;padding:19px 20px;box-shadow:var(--shadow);min-height:137px;border:1px solid #e5eee0}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--secondary);font-size:13px}.stat-icon{width:42px;height:42px;border-radius:15px;background:#e2f4d8;color:#315b38;display:grid;place-items:center;font-size:20px}.stat strong{display:block;font-size:32px;font-weight:600;margin-top:12px;letter-spacing:-1px}.stat small{font-size:11px;color:var(--muted)}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:17px}.panel{background:var(--surface);border:1px solid #e5eee0;border-radius:24px;padding:22px;box-shadow:var(--shadow);min-width:0}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:22px}.panel h3{font-size:16px;font-weight:600;margin:0}.muted{color:var(--muted);font-size:12px}.bar-list{display:grid;gap:19px}.bar-row{display:grid;grid-template-columns:78px 1fr 36px;gap:11px;align-items:center;font-size:12px}.track{height:10px;background:var(--surface2);border-radius:20px;overflow:hidden}.fill{height:100%;border-radius:20px;background:#79c95b;width:0}.fill.warn{background:#d5a33a}.fill.red{background:#c65c59}.actions{display:grid;grid-template-columns:1fr 1fr;gap:11px}.action{border:0;background:#e8f5df;border-radius:24px;padding:17px;text-align:left;color:var(--ink);min-height:116px;transition:.18s}.action:disabled{opacity:.65;cursor:not-allowed}.action b{display:block;font-size:13px;margin:9px 0 4px}.action span{font-size:11px;color:var(--muted);line-height:1.45}.action .emoji{font-size:23px}.notice{margin-top:22px;padding:13px 16px;border-radius:15px;background:var(--amber-bg);color:var(--amber);font-size:12px;line-height:1.55}.notice.ok{background:var(--green-bg);color:var(--green)}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap}th,td{text-align:left;padding:14px 11px;border-bottom:1px solid #e5eee0}th{color:var(--muted);font-weight:600}td.empty{text-align:center;color:var(--muted);padding:30px 15px;white-space:normal}.status{display:inline-block;padding:6px 11px;border-radius:30px;background:var(--green-bg);color:var(--green);font-size:11px;font-weight:600}.foot{text-align:center;color:var(--muted);font-size:11px;padding:28px 0 0}.hidden{display:none}
+@media(max-width:760px){body{padding-bottom:76px}.top{height:70px;padding:0 16px}.top-right{display:none}.wrap{margin:5px auto;padding:0 14px 30px}.welcome{padding:22px;border-radius:25px;align-items:flex-start;min-height:unset}.welcome h2{font-size:21px}.welcome p{font-size:13px}.year-pill{font-size:10px;padding:9px 11px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat{padding:15px;border-radius:21px;min-height:125px}.stat strong{font-size:27px}.stat-top{font-size:12px}.stat-icon{height:37px;width:37px}.grid{grid-template-columns:1fr;gap:12px;margin-top:12px}.panel{padding:18px;border-radius:26px}.toolbar{margin:22px 2px 13px;align-items:flex-start;flex-direction:column}.toolbar h3{font-size:17px}.select{width:100%}.actions{gap:9px}.action{padding:14px;min-height:110px}.panel-head{margin-bottom:18px}}
+</style>
+<style>
+.modal-backdrop{position:fixed;inset:0;background:#10201488;z-index:30;display:none;align-items:center;justify-content:center;padding:16px}
+.modal-backdrop.show{display:flex}.modal{background:var(--surface);border-radius:24px;padding:22px;max-width:560px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 15px 50px #0003}
+.modal h3{margin:0 0 12px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:12px;color:var(--muted);font-weight:600}
+.field input,.field select{padding:12px;border:1px solid var(--outline);border-radius:12px;background:white;font:inherit;color:var(--ink);width:100%}
+.btn{border:0;border-radius:14px;padding:11px 15px;background:#e8f5df;color:var(--primary);font-weight:700;cursor:pointer;margin:4px 4px 4px 0}
+.btn.primary{background:var(--primary);color:white}.btn.danger{background:var(--red-bg);color:var(--red)}
+.btn:disabled{opacity:.5}.quick-actions .action{cursor:pointer;border:1px solid #d5e5cf}
+.quick-actions .action:disabled{opacity:.5;cursor:not-allowed}
+.panel-tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+#scan-reader{width:100%;max-width:420px;margin:12px auto}
+#qr-output{background:white;padding:12px;display:inline-block;border-radius:12px;margin:12px 0;min-height:20px}
+#authStatus{margin:12px 0}.app-tabs{display:flex;gap:8px;overflow:auto;padding:12px 0}.app-tabs button{white-space:nowrap}
+.feature-view{display:none;margin-top:12px}.feature-view.active{display:block}
+@media(max-width:760px){.modal{padding:18px}.app-tabs{padding-bottom:6px}}
+</style>
+</head><body>
+<header class="top" id="top"><div class="brand"><div class="logo">🌏</div><div><h1>Absensi Geografi</h1><p>Kelas XII G · Sistem Kehadiran Siswa</p></div></div><div class="top-right">TAHUN AJARAN<br><b>2026 / 2027</b><br><button class="btn" id="loginOpen">Login Pengelola</button><button class="btn" id="logoutBtn" style="display:none">Keluar</button></div></header>
+<main class="wrap"><section class="welcome"><div><h2>Selamat datang 👋</h2><p>Kelola kehadiran kelas XII G dengan lebih mudah. Pantau ringkasan, aktivitas terbaru, dan laporan absensi dalam satu tempat.</p></div><div class="year-pill">TA 2026/2027</div></section>
+<div class="toolbar"><h3>Ringkasan Kehadiran</h3><select id="monthSelect" class="select" aria-label="Pilih bulan laporan"></select></div>
+<section class="cards"><article class="stat"><div class="stat-top"><span>Total Siswa</span><span class="stat-icon">👥</span></div><strong id="totalStudents">—</strong><small>Terdaftar di kelas XII G</small></article><article class="stat"><div class="stat-top"><span>Hadir</span><span class="stat-icon">✓</span></div><strong id="presentCount">0</strong><small>Catatan bulan terpilih</small></article><article class="stat"><div class="stat-top"><span>Izin & Sakit</span><span class="stat-icon">▤</span></div><strong id="excusedCount">0</strong><small>Catatan bulan terpilih</small></article><article class="stat"><div class="stat-top"><span>Alpha</span><span class="stat-icon">!</span></div><strong id="absentCount">0</strong><small>Catatan bulan terpilih</small></article></section>
+<section class="grid"><article class="panel"><div class="panel-head"><h3>Statistik Kehadiran</h3><span class="muted" id="periodLabel">—</span></div><div class="bar-list"><div class="bar-row"><span>Hadir</span><div class="track"><div class="fill" id="presentBar"></div></div><b id="presentPct">0%</b></div><div class="bar-row"><span>Izin/Sakit</span><div class="track"><div class="fill warn" id="excusedBar"></div></div><b id="excusedPct">0%</b></div><div class="bar-row"><span>Alpha</span><div class="track"><div class="fill red" id="absentBar"></div></div><b id="absentPct">0%</b></div></div><div id="connectionNotice" class="notice">Menghubungkan ke Supabase…</div></article>
+<article class="panel"><div class="panel-head"><h3>Akses Cepat</h3><span class="muted">Menu aplikasi</span></div><div class="actions quick-actions"><button class="action" id="openStudents"><span class="emoji">👩‍🎓</span><b>Data Siswa</b><span>Kelola daftar siswa</span></button><button class="action" id="openSession"><span class="emoji">▦</span><b>QR Absensi</b><span>Buat sesi QR resmi</span></button><button class="action" id="openScanner"><span class="emoji">📷</span><b>Scan QR</b><span>Pindai melalui kamera</span></button><button class="action" id="openReports"><span class="emoji">📊</span><b>Laporan</b><span>Rekap dan unduh laporan</span></button></div></article></section>
+<section class="panel" style="margin-top:16px"><div class="panel-head"><h3>Aktivitas Kehadiran Terbaru</h3><span class="muted">10 catatan terakhir</span></div><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Nama Siswa</th><th>Kelas</th><th>Status</th></tr></thead><tbody id="recentRows"><tr><td class="empty" colspan="4">Memuat data…</td></tr></tbody></table></div></section>
+<section class="panel" id="featurePanel" style="display:none;margin-top:16px">
+ <div class="panel-head"><h3 id="featureTitle">Fitur Absensi</h3><button class="btn" id="closeFeature">Tutup</button></div>
+ <div class="app-tabs">
+  <button class="btn" data-view="studentsView">Data Siswa</button>
+  <button class="btn" data-view="sessionView">QR Sesi</button>
+  <button class="btn" data-view="scannerView">Pemindai QR</button>
+  <button class="btn" data-view="reportsView">Laporan</button>
+ </div>
+ <div class="feature-view" id="studentsView">
+  <p class="muted">Daftar siswa dibaca dari tabel <b>students</b>. Penambahan/edit data perlu disesuaikan dengan nama kolom tabel yang sebenarnya.</p>
+  <div class="panel-tools"><button class="btn primary" id="loadStudents">Muat data siswa</button></div>
+  <div class="table-wrap"><table><thead><tr><th>Data siswa</th><th>Informasi</th></tr></thead><tbody id="studentList"><tr><td colspan="2" class="empty">Login terlebih dahulu.</td></tr></tbody></table></div>
+  <div class="notice" id="studentMsg">Fitur baca data memerlukan akun yang memiliki izin SELECT melalui RLS.</div>
+ </div>
+ <div class="feature-view" id="sessionView">
+  <p>Buat QR sesi untuk dibagikan kepada peserta. QR ini berisi kode sesi dan waktu kedaluwarsa; QR belum mencatat kehadiran tanpa endpoint backend tervalidasi.</p>
+  <div class="field"><label>Mata pelajaran</label><input id="sessionSubject" value="Geografi"></div>
+  <div class="field"><label>Masa berlaku (menit)</label><input id="sessionExpiry" type="number" min="1" max="180" value="30"></div>
+  <button class="btn primary" id="createSession">Buat QR sesi</button><div id="qr-output"></div><div id="sessionText" class="muted"></div>
+ </div>
+ <div class="feature-view" id="scannerView">
+  <p>Gunakan kamera untuk membaca QR siswa atau QR sesi. Pemindaian tidak otomatis menulis data absensi.</p>
+  <button class="btn primary" id="startScanner">Mulai kamera</button><button class="btn" id="stopScanner">Hentikan</button>
+  <div id="scan-reader"></div><div class="notice" id="scanMsg">Kamera belum dijalankan.</div>
+ </div>
+ <div class="feature-view" id="reportsView">
+  <p>Unduh catatan absensi sesuai data yang dapat dibaca akun ini.</p>
+  <div class="field"><label>Bulan laporan</label><input id="reportMonth" type="month"></div>
+  <button class="btn primary" id="downloadReport">Unduh CSV</button><div class="notice" id="reportMsg">Login dan izin baca geo_attendance diperlukan.</div>
+ </div>
+</section>
+<div class="modal-backdrop" id="authModal"><div class="modal">
+ <h3 id="authTitle">Login Pengelola</h3>
+ <p class="muted">Masuk menggunakan akun yang terdaftar di Supabase Authentication → Users.</p>
+ <div class="field"><label>Email</label><input id="authEmail" type="email" autocomplete="username" placeholder="email@gmail.com"></div>
+ <div class="field"><label>Password</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="Password akun website"></div>
+ <div class="panel-tools"><button class="btn primary" id="signInBtn">Masuk</button><button class="btn" id="forgotBtn">Lupa password</button><button class="btn" id="authClose">Tutup</button></div>
+ <div class="notice" id="authMsg">Password website Supabase Auth berbeda dari password Dashboard Supabase.</div>
+</div></div>
+<div class="modal-backdrop" id="recoveryModal"><div class="modal">
+ <h3>Buat password baru</h3><p class="muted">Halaman ini terbuka setelah tautan pemulihan mengarahkan kembali ke website.</p>
+ <div class="field"><label>Password baru</label><input id="newPassword" type="password" minlength="8" autocomplete="new-password"></div>
+ <div class="field"><label>Ulangi password baru</label><input id="confirmPassword" type="password" minlength="8" autocomplete="new-password"></div>
+ <button class="btn primary" id="saveNewPassword">Simpan password baru</button><div class="notice" id="recoveryMsg">Gunakan minimal 8 karakter. Jangan bagikan password kepada siapa pun.</div>
+</div></div>
+<div class="foot">© 2026/2027 · Absensi Digital Geografi XII G</div></main>
+<nav class="mobile-nav" aria-label="Navigasi utama"><a href="#top" aria-label="Beranda">⌂<small>Beranda</small></a><a href="#featurePanel" id="navStudents" aria-label="Siswa">♙<small>Siswa</small></a><a href="#featurePanel" id="navQR" aria-label="QR Absensi">▦<small>QR</small></a><a href="#featurePanel" id="navReports" aria-label="Laporan">◷<small>Laporan</small></a></nav>
+<style>.mobile-nav{display:none}@media(max-width:760px){.mobile-nav{position:fixed;z-index:10;bottom:10px;left:12px;right:12px;height:62px;border-radius:28px;background:#e4f2dc;box-shadow:0 5px 22px #263b2520;display:flex;align-items:center;justify-content:space-around;padding:5px 10px}.mobile-nav a{min-width:58px;text-decoration:none;color:#405b43;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:21px}.mobile-nav small{font-size:10px;font-weight:600}}</style>
 <script>
-const SUPABASE_URL = "https://jzcmwefyioezabwsxoty.supabase.co";
-const SUPABASE_KEY = "sb_publishable_D4Tfj0h4g8YUKHJsr5yFLQ_ekxFrBAH";
-    </script>
-</body>
-</html>
+const SUPABASE_URL='https://jzcmwefyioezabwsxoty.supabase.co';
+const SUPABASE_KEY='sb_publishable_D4Tfj0h4G8YUKHJsr5yFLQ_ekxFrBAH';
+const SITE_URL='https://manalumlu51-bit.github.io/Absensi-Geografi-XIIG-Tahun-2026-2027/';
+const $=id=>document.getElementById(id);
+let sb=null, activeScanner=null, reportRows=[];
+const monthSelect=$('monthSelect');
+const months=[['Juli 2026','2026-07'],['Agustus 2026','2026-08'],['September 2026','2026-09'],['Oktober 2026','2026-10'],['November 2026','2026-11'],['Desember 2026','2026-12'],['Januari 2027','2027-01'],['Februari 2027','2027-02'],['Maret 2027','2027-03'],['April 2027','2027-04'],['Mei 2027','2027-05'],['Juni 2027','2027-06']];
+monthSelect.innerHTML=months.map(([n,v])=>`<option value="${v}">${n}</option>`).join('');
+const nowMonth=new Date().toISOString().slice(0,7);monthSelect.value=months.some(x=>x[1]===nowMonth)?nowMonth:'2026-11';
+$('reportMonth').value=monthSelect.value;
+function msg(id,text,ok=false){const e=$(id);e.textContent=text;e.className='notice'+(ok?' ok':'')}
+function openFeature(view){$('featurePanel').style.display='block';document.querySelectorAll('.feature-view').forEach(x=>x.classList.toggle('active',x.id===view));$('featureTitle').textContent=({studentsView:'Data Siswa',sessionView:'QR Sesi',scannerView:'Pemindai QR',reportsView:'Laporan'})[view]||'Fitur Absensi';$('featurePanel').scrollIntoView({behavior:'smooth',block:'start'});}
+function signedIn(){return !!sb && !!window.__absensiSession}
+function authOpen(){ $('authModal').classList.add('show'); }
+$('loginOpen').onclick=authOpen;$('authClose').onclick=()=>$('authModal').classList.remove('show');
+$('logoutBtn').onclick=async()=>{await sb.auth.signOut();window.__absensiSession=null;location.reload()};
+$('signInBtn').onclick=async()=>{const email=$('authEmail').value.trim(),password=$('authPassword').value;if(!email||!password)return msg('authMsg','Email dan password wajib diisi.');const {data,error}=await sb.auth.signInWithPassword({email,password});if(error)return msg('authMsg','Login gagal: '+error.message);window.__absensiSession=data.session;$('authModal').classList.remove('show');$('loginOpen').style.display='none';$('logoutBtn').style.display='inline-block';msg('connectionNotice','Login berhasil. Memuat data akun…',true);await loadDashboard();};
+$('forgotBtn').onclick=async()=>{const email=$('authEmail').value.trim();if(!email)return msg('authMsg','Isi email akun terlebih dahulu.');const {error}=await sb.auth.resetPasswordForEmail(email,{redirectTo:SITE_URL});if(error)return msg('authMsg','Gagal mengirim email pemulihan: '+error.message);msg('authMsg','Email pemulihan dikirim. Buka Gmail dan ikuti tautannya. Pastikan URL Configuration Supabase mengizinkan alamat website ini.',true)};
+async function loadDashboard(){
+ if(!window.supabase){msg('connectionNotice','Library Supabase tidak termuat. Periksa koneksi internet.');return}
+ sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{flowType:'pkce',detectSessionInUrl:true}});
+ const {data:{session}}=await sb.auth.getSession();window.__absensiSession=session;
+ if(session){$('loginOpen').style.display='none';$('logoutBtn').style.display='inline-block'}else{$('loginOpen').style.display='inline-block';$('logoutBtn').style.display='none'}
+ const {count,error}=await sb.from('students').select('*',{count:'exact',head:true});
+ if(error){$('totalStudents').textContent='—';msg('connectionNotice','Belum dapat membaca tabel students: '+error.message+'. Login dan periksa kebijakan RLS.');return}
+ $('totalStudents').textContent=count??0;await loadAttendance();
+}
+async function loadAttendance(){
+ if(!sb)return;const m=monthSelect.value,[y,mo]=m.split('-').map(Number),start=m+'-01',end=new Date(y,mo,1).toISOString().slice(0,10);
+ $('periodLabel').textContent=months.find(x=>x[1]===m)?.[0]||m;
+ const {data,error}=await sb.from('geo_attendance').select('student_name,class_name,status,attendance_date,created_at').gte('attendance_date',start).lt('attendance_date',end).order('created_at',{ascending:false}).limit(5000);
+ if(error){msg('connectionNotice','Data absensi belum dapat dibaca: '+error.message);return}
+ reportRows=data||[];let p=0,e=0,a=0;reportRows.forEach(r=>{let s=String(r.status||'').toLowerCase();if(s.includes('hadir')||s==='present')p++;else if(s.includes('izin')||s.includes('sakit')||s==='excused')e++;else if(s.includes('alpha')||s.includes('alpa')||s==='absent')a++});
+ $('presentCount').textContent=p;$('excusedCount').textContent=e;$('absentCount').textContent=a;
+ const total=p+e+a;[['present',p],['excused',e],['absent',a]].forEach(([k,v])=>{let pct=total?Math.round(v/total*100):0;$(k+'Bar').style.width=pct+'%';$(k+'Pct').textContent=pct+'%'});
+ const body=$('recentRows');body.innerHTML='';if(!reportRows.length)body.innerHTML='<tr><td class="empty" colspan="4">Belum ada catatan pada bulan ini.</td></tr>';
+ reportRows.slice(0,10).forEach(r=>{let tr=document.createElement('tr');[r.attendance_date,r.student_name,r.class_name,r.status].forEach(v=>{let td=document.createElement('td');td.textContent=v||'—';tr.appendChild(td)});body.appendChild(tr)});
+ msg('connectionNotice',sessionText()+' Dashboard terhubung. Data dibatasi oleh izin RLS.',true);
+}
+function sessionText(){return window.__absensiSession?'Login aktif.':'Mode pengunjung: login diperlukan untuk data terbatas.'}
+monthSelect.onchange=()=>{ $('reportMonth').value=monthSelect.value;loadAttendance()};
+$('openStudents').onclick=()=>openFeature('studentsView');$('openSession').onclick=()=>openFeature('sessionView');$('openScanner').onclick=()=>openFeature('scannerView');$('openReports').onclick=()=>openFeature('reportsView');
+$('navStudents').onclick=()=>openFeature('studentsView');$('navQR').onclick=()=>openFeature('sessionView');$('navReports').onclick=()=>openFeature('reportsView');
+$('closeFeature').onclick=()=>{$('featurePanel').style.display='none';};
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>openFeature(b.dataset.view));
+$('loadStudents').onclick=async()=>{if(!window.__absensiSession)return msg('studentMsg','Silakan login terlebih dahulu.');const {data,error}=await sb.from('students').select('*').limit(500);if(error)return msg('studentMsg','Gagal membaca siswa: '+error.message);const tbody=$('studentList');tbody.innerHTML='';(data||[]).forEach((row,i)=>{let tr=document.createElement('tr'),a=document.createElement('td'),b=document.createElement('td');a.textContent=row.student_name||row.name||row.full_name||('Siswa '+(i+1));b.textContent=Object.entries(row).filter(([k])=>!['id','qr_token'].includes(k)).map(([k,v])=>k+': '+v).join(' · ');tr.append(a,b);tbody.appendChild(tr)});if(!data?.length)tbody.innerHTML='<tr><td colspan="2" class="empty">Belum ada data siswa.</td></tr>';msg('studentMsg','Daftar siswa berhasil dimuat. Kolom tabel ditampilkan sesuai struktur database.',true)};
+$('createSession').onclick=()=>{if(!window.QRCode){msg('sessionText','Pustaka QR belum termuat.');return}const mins=Math.max(1,Math.min(180,Number($('sessionExpiry').value)||30)),expires=new Date(Date.now()+mins*60000);const payload={type:'geo_attendance_session',session_code:crypto.randomUUID(),subject:$('sessionSubject').value.trim()||'Geografi',class_name:'XII G',expires_at:expires.toISOString()};$('qr-output').innerHTML='';new QRCode($('qr-output'),{text:JSON.stringify(payload),width:210,height:210});$('sessionText').textContent='QR sesi dibuat, berlaku sampai '+expires.toLocaleString('id-ID')+'. QR ini belum mengirim absensi ke database.'};
+$('startScanner').onclick=async()=>{if(!window.Html5Qrcode){msg('scanMsg','Library pemindai tidak termuat.');return}try{activeScanner=new Html5Qrcode('scan-reader');await activeScanner.start({facingMode:'environment'},{fps:10,qrbox:{width:230,height:230}},decoded=>{msg('scanMsg','QR terbaca: '+decoded+'. Belum dicatat; validasi backend diperlukan.',true);activeScanner.stop().catch(()=>{})});msg('scanMsg','Kamera aktif. Arahkan ke QR.',true)}catch(err){msg('scanMsg','Kamera gagal dibuka: '+err.message+'. Gunakan HTTPS dan izinkan kamera.')}};
+$('stopScanner').onclick=()=>{if(activeScanner)activeScanner.stop().then(()=>msg('scanMsg','Pemindaian dihentikan.')).catch(()=>{})};
+$('downloadReport').onclick=async()=>{const m=$('reportMonth').value;if(!m)return msg('reportMsg','Pilih bulan laporan.');const [y,mo]=m.split('-').map(Number),end=new Date(y,mo,1).toISOString().slice(0,10);const {data,error}=await sb.from('geo_attendance').select('attendance_date,student_name,class_name,subject,status,created_at').gte('attendance_date',m+'-01').lt('attendance_date',end).order('created_at');if(error)return msg('reportMsg','Gagal mengambil laporan: '+error.message);const rows=[['Tanggal','Nama Siswa','Kelas','Mata Pelajaran','Status','Waktu'],...(data||[]).map(r=>[r.attendance_date,r.student_name,r.class_name,r.subject,r.status,r.created_at])];const csv=rows.map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');const url=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='laporan-absensi-'+m+'.csv';a.click();URL.revokeObjectURL(url);msg('reportMsg','Laporan CSV berhasil dibuat.',true)};
+$('saveNewPassword').onclick=async()=>{const p=$('newPassword').value,c=$('confirmPassword').value;if(p.length<8)return msg('recoveryMsg','Password minimal 8 karakter.');if(p!==c)return msg('recoveryMsg','Konfirmasi password tidak sama.');const {error}=await sb.auth.updateUser({password:p});if(error)return msg('recoveryMsg','Gagal memperbarui password: '+error.message);msg('recoveryMsg','Password berhasil diperbarui. Silakan login menggunakan password baru.',true);$('newPassword').value='';$('confirmPassword').value=''};
+$('closeFeature').onclick=()=>{$('featurePanel').style.display='none'};
+(async()=>{await loadDashboard();const {data:{session}}=await sb.auth.getSession();if(window.location.hash.includes('type=recovery')||window.location.search.includes('code=')){$('recoveryModal').classList.add('show');}sb.auth.onAuthStateChange((event,session)=>{window.__absensiSession=session;if(event==='PASSWORD_RECOVERY')$('recoveryModal').classList.add('show');});})();
+</script>
+</body></html>

@@ -82,8 +82,9 @@
 <nav class="mobile-nav" aria-label="Navigasi utama"><a href="#top" aria-label="Beranda">⌂<small>Beranda</small></a><a href="#featurePanel" id="navStudents" aria-label="Siswa">♙<small>Siswa</small></a><a href="#featurePanel" id="navQR" aria-label="QR Absensi">▦<small>QR</small></a><a href="#featurePanel" id="navReports" aria-label="Laporan">◷<small>Laporan</small></a></nav>
 <style>.mobile-nav{display:none}@media(max-width:760px){.mobile-nav{position:fixed;z-index:10;bottom:10px;left:12px;right:12px;height:62px;border-radius:28px;background:#e4f2dc;box-shadow:0 5px 22px #263b2520;display:flex;align-items:center;justify-content:space-around;padding:5px 10px}.mobile-nav a{min-width:58px;text-decoration:none;color:#405b43;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:21px}.mobile-nav small{font-size:10px;font-weight:600}}</style>
 <script>
-const SUPABASE_URL=https://jzcmwefyioezabwsxoty.supabase.co/rest/v1/
-const SUPABASE_KEY=sb_publishable_D4Tfj0h4g8YUKHJsr5yFLQ_ekxFrBAH
+const SUPABASE_URL = "https://jzcmwefyioezabwsxoty.supabase.co";
+
+const SUPABASE_KEY = "sb_publishable_D4Tfj0h4g8YUKHJsr5yFLQ_ekxFrBAH";
 const SITE_URL='https://manalumlu51-bit.github.io/Absensi-Geografi-XIIG-Tahun-2026-2027/';
 const $=id=>document.getElementById(id);
 let sb=null, activeScanner=null, reportRows=[];
